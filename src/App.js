@@ -3,27 +3,21 @@ import Employee from './components/Employee';
 
 
 function App() {
+  console.log('we are about ot list the emmployees');
+  const showEmployee=true;
   return (
     <div className="App">
-      <header className="App-header">
-        
+      {showEmployee ?
+        <>
         <Employee/>
         <Employee/>
         <Employee/>
         <Employee/>
         <Employee/>
-
-
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        </>
+      : 
+      <p>You can't see the employee</p>
+      }
     </div>
   );
 }
